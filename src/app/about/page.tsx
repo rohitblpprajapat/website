@@ -22,11 +22,11 @@ export default function AboutPage() {
             </p>
             <div className="grid grid-cols-2 gap-8 mt-12 bg-gray-50 dark:bg-white/5 p-8 rounded-2xl border border-black/10 dark:border-white/10 transition-colors">
               <div>
-                <h3 className="text-4xl font-bold text-gold mb-2">5+</h3>
+                <h3 className="font-display text-4xl font-semibold text-accent mb-2">Est. 1995</h3>
                 <p className="text-gray-600 dark:text-gray-400 font-semibold tracking-wider uppercase text-sm transition-colors">Years Experience</p>
               </div>
               <div>
-                <h3 className="text-4xl font-bold text-gold mb-2">100%</h3>
+                <h3 className="font-display text-4xl font-semibold text-accent mb-2">18+ Countries</h3>
                 <p className="text-gray-600 dark:text-gray-400 font-semibold tracking-wider uppercase text-sm transition-colors">Quality Guaranteed</p>
               </div>
             </div>

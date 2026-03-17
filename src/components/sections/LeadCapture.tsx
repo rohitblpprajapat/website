@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Download, FileText } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function LeadCapture() {
@@ -19,9 +20,21 @@ export default function LeadCapture() {
   };
 
   return (
-    <section id="catalog" className="py-32 bg-muted relative overflow-hidden border-t border-border transition-colors duration-300">
-      <div className="absolute inset-0 z-0 opacity-30">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-glow h-glow bg-gold/20 rounded-full blur-glow" />
+    <section id="catalog" className="py-32 relative overflow-hidden border-t border-border transition-colors duration-300">
+      {/* Marble background image */}
+      <Image
+        src="https://www.stonexglobal.com/_next/image?url=https%3A%2F%2Fwordpress-826134-4189514.cloudwaysapps.com%2Fwp-content%2Fuploads%2F2024%2F08%2FColiseum-1372x1936_v1_11zon.jpg&w=640&q=90"
+        alt="Coliseum marble background"
+        fill
+        className="object-cover"
+        priority={false}
+      />
+      {/* Strong dark overlay so text stays legible */}
+      <div className="absolute inset-0 bg-black/80 z-0" />
+
+      {/* Ambient glow accent */}
+      <div className="absolute inset-0 z-0 opacity-20">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-glow h-glow bg-accent/30 rounded-full blur-glow" />
       </div>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
@@ -31,8 +44,8 @@ export default function LeadCapture() {
            viewport={{ once: true }}
            transition={{ duration: 0.6 }}
         >
-          <div className="bg-gold/10 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-8 border border-gold/30">
-            <FileText className="w-12 h-12 text-gold" />
+          <div className="bg-accent/10 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-8 border border-accent/30">
+            <FileText className="w-12 h-12 text-accent" />
           </div>
           
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground mb-6 transition-colors">
@@ -61,7 +74,7 @@ export default function LeadCapture() {
               <button 
                 type="submit" 
                 disabled={loading}
-                className="bg-gold text-white px-10 py-4 rounded-full font-semibold hover:bg-gold/80 transition-colors flex items-center justify-center gap-2 group hover:scale-105"
+                className="bg-accent text-white px-10 py-4 rounded-full font-semibold hover:bg-accent/80 transition-colors flex items-center justify-center gap-2 group hover:scale-105"
               >
                 {loading ? "Processing..." : (
                   <>

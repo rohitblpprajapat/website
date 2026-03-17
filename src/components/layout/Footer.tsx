@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -6,9 +7,30 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="col-span-1 md:col-span-2">
-            <h2 className="font-heading text-2xl font-bold text-foreground mb-4 transition-colors">AAAStonex</h2>
+            <Link href="/" className="inline-block mb-6">
+              {/* Mobile Logo */}
+              <div className="md:hidden">
+                <Image 
+                  src="/assets/logo-white.png" 
+                  alt="AAAStonex Logo" 
+                  width={100}
+                  height={35} 
+                  className="object-contain"
+                />
+              </div>
+              {/* Desktop Logo */}
+              <div className="hidden md:block">
+                <Image 
+                  src="/assets/full-logo-white.png" 
+                  alt="AAAStonex Full Logo" 
+                  width={220}
+                  height={60} 
+                  className="object-contain"
+                />
+              </div>
+            </Link>
             <p className="text-foreground/70 text-sm leading-relaxed max-w-md transition-colors">
-              Premium marble and granite manufacturer based in Kishangarh, Rajasthan. 5 years of craftsmanship and excellence in every slab.
+              Premium marble and granite manufacturer based in Kishangarh, Rajasthan. 30+ years of excellence in building India&apos;s stone legacy.
             </p>
           </div>
           <div>

@@ -1,108 +1,102 @@
 @import "tailwindcss";
 
 @custom-variant dark (&:is(.dark *));
-@custom-variant stone (&:is(.stone *));
-@custom-variant sand (&:is(.sand *));
-@custom-variant midnight (&:is(.midnight *));
 
 @theme {
+  /* ── Color Tokens ────────────────────────────── */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
   --color-border: var(--border);
-  
-  --color-input: hsl(0 0% 15%);
-  --color-ring: hsl(0 0% 40%);
-  
+  --color-accent: var(--accent);
+
+  /* Material-inspired stone palette */
+  --color-stone-black: #2A2926;      /* Rajasthan Black charcoal */
+  --color-stone-amber: #C5A059;      /* Tiger Skin warm amber */
+  --color-stone-blush: #C4A89A;      /* Rosy Pink dusty blush */
+  --color-stone-dust: #C9B99A;       /* Granite dust warm neutral */
+  --color-stone-cream: #F5F0E8;      /* Premium off-white / Antolini-inspired */
   --color-onyx: #0a0a0a;
-  --color-slate-grey: #1c1c1c;
   --color-white: #ffffff;
-  --color-gold: #D4AF37;
 
-  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  /* ── Typography ──────────────────────────────── */
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
   --font-heading: var(--font-playfair), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-display: var(--font-cormorant), ui-serif, Georgia, serif;
 
+  /* ── Border Radius ───────────────────────────── */
   --radius-lg: 0.5rem;
   --radius-md: calc(0.5rem - 2px);
   --radius-sm: calc(0.5rem - 4px);
   --radius-card: 2rem;
 
+  /* ── Tracking (Letter-Spacing) ───────────────── */
   --tracking-editorial: 0.2em;
   --tracking-editorial-hover: 0.25em;
   --tracking-scroll: 0.3em;
 
+  /* ── Blur ────────────────────────────────────── */
   --blur-hero: 120px;
   --blur-glow: 100px;
   --blur-collection: 150px;
 
+  /* ── Spacing ─────────────────────────────────── */
   --spacing-nav: 95%;
   --spacing-hero: 100svh;
   --spacing-glow: 600px;
 
-  --shadow-glow: 0 0 40px rgba(0,0,0,0.1);
-  --shadow-glow-gold: 0 0 40px rgba(212,175,55,0.3);
-  --shadow-card: 0 8px 30px rgba(212,175,55,0.1);
-  --shadow-product: 0 20px 40px rgba(212,175,55,0.1);
+  /* ── Shadows ─────────────────────────────────── */
+  --shadow-glow-amber: 0 0 40px rgba(197,160,89,0.25);
+  --shadow-card: 0 8px 30px rgba(197,160,89,0.08);
+  --shadow-product: 0 20px 40px rgba(42,41,38,0.12);
 
+  /* ── Animations ──────────────────────────────── */
   --animate-shimmer: shimmer 2s infinite linear;
+  --animate-ken-burns: kenBurns 20s ease-in-out infinite alternate;
+  --animate-marquee: marquee 45s linear infinite;
+  --animate-marquee-reverse: marquee-reverse 45s linear infinite;
 }
 
 @keyframes shimmer {
   from { transform: translateX(-100%); }
-  to { transform: translateX(200%); }
+  to   { transform: translateX(200%); }
 }
 
+@keyframes kenBurns {
+  from { transform: scale(1.0) translate(0, 0); }
+  to   { transform: scale(1.06) translate(-1%, -0.5%); }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+
+/* ── Global Config Variables ─────────────────────── */
 :root {
-  /* Global Configs */
   --noise-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
   --grid-size: 50px;
   --grid-mask: radial-gradient(ellipse at center, black 10%, transparent 80%);
 }
 
-:root, .light {
-  --background: #ffffff;
-  --foreground: #0a0a0a;
-  --muted: #f3f4f6;
-  --border: rgba(0,0,0,0.1);
-  --noise-opacity: 0.015;
-  --noise-blend-mode: multiply;
-}
+/* ── Theme — Dark Only ───────────────────────────── */
 
-.dark {
-  --background: #121212;
-  --foreground: #f3f4f6;
-  --muted: #1f2937;
-  --border: rgba(255,255,255,0.1);
+:root, .dark {
+  --background: #1C1A17;        /* deep warm charcoal */
+  --foreground: #F0EBE3;        /* warm off-white text */
+  --muted: #2A2620;             /* slightly lighter charcoal for cards */
+  --border: rgba(197,160,89,0.15);
+  --accent: #C5A059;            /* Tiger Skin amber */
   --noise-opacity: 0.02;
   --noise-blend-mode: screen;
 }
 
-.stone {
-  --background: #d4d4d8;
-  --foreground: #18181b;
-  --muted: #e4e4e7;
-  --border: rgba(0,0,0,0.1);
-  --noise-opacity: 0.015;
-  --noise-blend-mode: multiply;
-}
-
-.sand {
-  --background: #fdf6e3;
-  --foreground: #2d3748;
-  --muted: #eee8d5;
-  --border: rgba(0,0,0,0.1);
-  --noise-opacity: 0.015;
-  --noise-blend-mode: multiply;
-}
-
-.midnight {
-  --background: #0f172a;
-  --foreground: #f8fafc;
-  --muted: #1e293b;
-  --border: rgba(255,255,255,0.1);
-  --noise-opacity: 0.02;
-  --noise-blend-mode: screen;
-}
+/* ── Utility Classes ─────────────────────────────── */
 
 .bg-noise {
   background-image: var(--noise-image);
@@ -117,16 +111,38 @@
     linear-gradient(to bottom, var(--color-border) 1px, transparent 1px);
   mask-image: var(--grid-mask);
   -webkit-mask-image: var(--grid-mask);
-  opacity: 0.5;
+  opacity: 0.4;
   pointer-events: none;
 }
+
+/* Pull-quote / editorial stat typography */
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* ── Base Styles ─────────────────────────────────── */
 
 body {
   background-color: var(--background);
   color: var(--foreground);
   transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
+/* Strict typographic hierarchy */
+h1 { font-family: var(--font-heading); font-size: clamp(3rem, 8vw, 6rem); font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; }
+h2 { font-family: var(--font-heading); font-size: clamp(2rem, 4.5vw, 2.75rem); font-weight: 700; line-height: 1.15; letter-spacing: -0.01em; }
+h3 { font-family: var(--font-heading); font-size: clamp(1.25rem, 2vw, 1.5rem); font-weight: 600; line-height: 1.3; }
+h4, h5, h6 { font-family: var(--font-heading); }
+
+/* Constrained body line length for readability */
+p {
+  max-width: 68ch;
+  line-height: 1.7;
 }
+
+/* Accent colour utility via CSS variable */
+.text-accent { color: var(--accent); }
+.bg-accent    { background-color: var(--accent); }
+.border-accent { border-color: var(--accent); }

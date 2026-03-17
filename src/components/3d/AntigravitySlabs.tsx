@@ -5,10 +5,11 @@ import { Float, Environment, ContactShadows, PresentationControls } from "@react
 import { useRef } from "react";
 import * as THREE from "three";
 
-// Design Tokens for 3D Elements
+// Design Tokens for 3D Elements — stay in sync with globals.css stone palette
 const STONE_COLORS = {
-  rajasthanBlack: "#141414",
-  khardaRed: "#5e2b21"
+  rajasthanBlack: "#2A2926",   // deep warm charcoal (NOT pure black — more natural)
+  khardaRed: "#6B3728",        // slightly richer for depth against cream
+  tigerSkin: "#C5A059",        // Tiger Skin amber for a third slab on larger screens
 } as const;
 
 type SlabProps = {
@@ -45,10 +46,10 @@ export default function AntigravitySlabs() {
   return (
     <div className="absolute inset-0 z-0 h-screen w-full cursor-grab active:cursor-grabbing">
       <Canvas shadows camera={{ position: [0, 0, 9], fov: 45 }}>
-        <ambientLight intensity={0.4} />
-        <directionalLight position={[5, 5, 5]} intensity={1.5} castShadow />
-        <directionalLight position={[-5, 0, -5]} intensity={0.8} />
-        <spotLight position={[0, 10, 10]} angle={0.3} penumbra={1} intensity={1} castShadow />
+        <ambientLight intensity={0.5} />
+        <directionalLight position={[5, 5, 5]} intensity={1.8} castShadow />
+        <directionalLight position={[-5, 0, -5]} intensity={0.6} color="#C5A059" />
+        <spotLight position={[0, 10, 10]} angle={0.3} penumbra={1} intensity={0.8} castShadow />
 
         <PresentationControls
           global
@@ -58,7 +59,7 @@ export default function AntigravitySlabs() {
         >
           {/* Rajasthan Black Granite Slab */}
           <Slab
-            position={[-1.8, 0.5, 0]}
+            position={[-2.2, 0.5, 0]}
             rotation={[0.2, 0.4, -0.1]}
             color={STONE_COLORS.rajasthanBlack}
             scale={1.2}
@@ -66,10 +67,18 @@ export default function AntigravitySlabs() {
 
           {/* Kharda Red Granite Slab */}
           <Slab
-            position={[1.8, -0.5, -1]}
+            position={[2, -0.5, -1]}
             rotation={[-0.1, -0.3, 0.2]}
             color={STONE_COLORS.khardaRed}
             scale={1}
+          />
+
+          {/* Tiger Skin — accent warm slab */}
+          <Slab
+            position={[0.3, 1.2, -2.5]}
+            rotation={[0.15, 0.1, 0.05]}
+            color={STONE_COLORS.tigerSkin}
+            scale={0.75}
           />
         </PresentationControls>
 

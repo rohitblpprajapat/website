@@ -39,7 +39,7 @@ const products = [
 export default function ProductShowcase() {
   return (
     <section id="collection" className="py-24 bg-background text-foreground relative transition-colors duration-300">
-      <div className="absolute top-0 right-0 w-1/3 h-[500px] bg-gold/10 blur-collection rounded-full pointer-events-none" />
+      <div className="absolute top-0 right-0 w-1/3 h-[500px] bg-accent/10 blur-collection rounded-full pointer-events-none" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 transition-colors">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div className="max-w-2xl">
@@ -48,7 +48,7 @@ export default function ProductShowcase() {
               Explore our core selection. Hand-picked blocks, precisely cut, and polished to perfection for your most demanding architectural needs.
             </p>
           </div>
-          <Link href="#quote" className="inline-flex items-center gap-2 text-gold font-semibold hover:text-white transition-colors pb-2 border-b border-gold hover:border-white">
+          <Link href="#quote" className="inline-flex items-center gap-2 text-accent font-semibold hover:text-foreground transition-colors pb-2 border-b border-accent hover:border-foreground">
             Request Custom Cut <ArrowUpRight size={20} />
           </Link>
         </div>
@@ -81,14 +81,14 @@ export default function ProductShowcase() {
                 
                 {/* Hover Reveal Specs */}
                 <div className="overflow-hidden h-0 group-hover:h-32 transition-all duration-700 ease-in-out opacity-0 group-hover:opacity-100 mb-0 group-hover:mb-4">
-                  <ul className="space-y-2 text-sm text-foreground/60 mb-6 border-l-2 border-gold pl-4 transition-colors">
+                  <ul className="space-y-2 text-sm text-foreground/60 mb-6 border-l-2 border-accent pl-4 transition-colors">
                     {product.specs.map((spec, i) => (
                       <li key={i}>{spec}</li>
                     ))}
                   </ul>
                 </div>
                 
-                <button className="w-full sm:w-auto bg-gold text-black px-8 py-3 rounded-full font-semibold hover:bg-foreground hover:text-background transition-all transform hover:scale-105 shadow-md hover:shadow-lg">
+                <button className="w-full sm:w-auto bg-accent text-white px-8 py-3 rounded-full font-semibold hover:bg-foreground hover:text-background transition-all transform hover:scale-105 shadow-md hover:shadow-lg">
                   Request Sample
                 </button>
               </div>

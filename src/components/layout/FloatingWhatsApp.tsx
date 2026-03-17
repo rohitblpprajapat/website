@@ -13,7 +13,7 @@ export default function FloatingWhatsApp() {
       className="fixed bottom-6 right-6 z-50"
     >
       <Link 
-        href="https://wa.me/910000000000?text=Hello%20AAAStonex%21%20I%20would%20like%20to%20inquire%20about%20a%20granite%20order." 
+        href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "919982000000"}?text=Hello%20AAAStonex%21%20I%20would%20like%20to%20inquire%20about%20a%20granite%20wholesale%20order.`}
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center justify-center w-16 h-16 bg-green-500 text-white rounded-full shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:shadow-[0_0_30px_rgba(34,197,94,0.6)] hover:scale-110 transition-all group"

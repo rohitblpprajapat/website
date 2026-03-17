@@ -22,6 +22,14 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'uploads-ssl.webflow.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.stonexglobal.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'wordpress-826134-4189514.cloudwaysapps.com',
       }
     ],
   },

@@ -4,21 +4,13 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
-import { useTheme } from 'next-themes';
-import { ThemeToggle } from '@/components/ThemeToggle';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const { resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  // Use the white logo by default before hydration to prevent flash on dark mode (default)
-  const logoSrc = mounted && resolvedTheme === 'light' ? '/assets/logo-black.png' : '/assets/logo-white.png';
+  // Responsive logo selection
+  const smallLogo = '/assets/logo-white.png';
+  const fullLogo = '/assets/full-logo-white.png';
 
   const navLinks = [
     { name: 'Home', href: '/' },
@@ -33,16 +25,28 @@ export default function Navbar() {
           
           {/* Logo Area */}
           <Link href="/" className="flex-shrink-0 flex items-center">
-            {mounted && (
+            {/* Mobile Logo */}
+            <div className="md:hidden">
               <Image 
-                src={logoSrc} 
+                src={smallLogo} 
                 alt="AAAStonex Logo" 
-                width={200} // Increased size for desktop
-                height={60} 
-                className="object-contain h-12 md:h-16 w-auto" // Responsive height
+                width={120}
+                height={40} 
+                className="object-contain h-10 w-auto"
                 priority
               />
-            )}
+            </div>
+            {/* Desktop Logo */}
+            <div className="hidden md:block">
+              <Image 
+                src={fullLogo} 
+                alt="AAAStonex Full Logo" 
+                width={280}
+                height={80} 
+                className="object-contain h-14 w-auto"
+                priority
+              />
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -57,16 +61,13 @@ export default function Navbar() {
               </Link>
             ))}
             
-            <ThemeToggle />
-            
-            <Link href="#quote" className="px-8 py-3 bg-foreground text-background text-xs font-bold uppercase tracking-widest rounded-full hover:scale-105 transition-all shadow-xl hover:shadow-2xl hover:bg-gold hover:text-white">
+            <Link href="#quote" className="px-8 py-3 bg-foreground text-background text-xs font-bold uppercase tracking-widest rounded-full hover:scale-105 transition-all shadow-xl hover:shadow-2xl hover:bg-accent hover:text-white">
               Get a Quote
             </Link>
           </div>
 
-          {/* Mobile Menu Button & Theme Toggle */}
+          {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-4">
-            <ThemeToggle />
             <button 
               onClick={() => setIsOpen(!isOpen)}
               className="text-foreground/80 hover:text-foreground transition-colors p-2"
@@ -102,7 +103,7 @@ export default function Navbar() {
                 <Link 
                   href="#quote" 
                   onClick={() => setIsOpen(false)}
-                  className="block w-full text-center px-8 py-4 bg-gold text-black text-sm font-bold uppercase tracking-widest rounded-xl shadow-lg"
+                  className="block w-full text-center px-8 py-4 bg-accent text-background text-sm font-bold uppercase tracking-widest rounded-xl shadow-lg"
                 >
                   Get a Quote
                 </Link>
