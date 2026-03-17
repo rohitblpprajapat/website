@@ -11,34 +11,34 @@ export default function Footer() {
               {/* Mobile Logo */}
               <div className="md:hidden">
                 <Image 
-                  src="/assets/logo-white.png" 
+                  src="/assets/logo-black.png" 
                   alt="AAAStonex Logo" 
                   width={100}
                   height={35} 
-                  className="object-contain"
+                  className="object-contain opacity-90"
                 />
               </div>
               {/* Desktop Logo */}
               <div className="hidden md:block">
                 <Image 
-                  src="/assets/full-logo-white.png" 
+                  src="/assets/logo-black.svg" 
                   alt="AAAStonex Full Logo" 
-                  width={220}
-                  height={60} 
-                  className="object-contain"
+                  width={180}
+                  height={50} 
+                  className="object-contain opacity-90"
                 />
               </div>
             </Link>
             <p className="text-foreground/70 text-sm leading-relaxed max-w-md transition-colors">
-              Premium marble and granite manufacturer based in Kishangarh, Rajasthan. 30+ years of excellence in building India&apos;s stone legacy.
+              Premium marble and granite manufacturer based in Kishangarh, Rajasthan. 5 years of craftsmanship and excellence in every slab.
             </p>
           </div>
           <div>
             <h3 className="text-foreground font-semibold mb-4 transition-colors">Products</h3>
             <ul className="space-y-2 text-sm text-foreground/70 transition-colors">
-              <li><Link href="#black" className="hover:text-white">Rajasthan Black</Link></li>
-              <li><Link href="#red" className="hover:text-white">Kharda Red</Link></li>
-              <li><Link href="#custom" className="hover:text-black dark:hover:text-white transition-colors">Custom Cuts</Link></li>
+              <li><Link href="#black" className="hover:text-accent transition-colors">Rajasthan Black</Link></li>
+              <li><Link href="#red" className="hover:text-accent transition-colors">Kharda Red</Link></li>
+              <li><Link href="#custom" className="hover:text-accent transition-colors">Custom Cuts</Link></li>
             </ul>
           </div>
           <div>

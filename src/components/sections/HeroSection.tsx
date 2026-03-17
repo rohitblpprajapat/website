@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import AntigravitySlabs from "../3d/AntigravitySlabs";
@@ -29,10 +30,9 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background/80" />
       </div>
 
-      {/* 3D Floating Slabs — Airy, visible against light cream bg */}
       <AntigravitySlabs />
 
-      {/* Subtle architectural grid overlay */}
+      {/* Architectural grid overlay */}
       <div className="absolute inset-0 bg-grid z-0" />
 
       {/* Bottom gradient fade for smooth section blending */}
@@ -45,28 +45,28 @@ export default function HeroSection() {
         <span className="text-[10px] uppercase tracking-widest font-mono text-foreground font-semibold">Standard 10ft × 6ft Slab</span>
       </div>
 
-      {/* Hero Content — parallax on scroll */}
       <motion.div
         style={{ y, opacity }}
         className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center pointer-events-none"
       >
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[140%] bg-[radial-gradient(circle_at_center,var(--background)_0%,transparent_75%)] opacity-70 md:opacity-60 blur-3xl z-0 pointer-events-none" />
+        
         <motion.div
+          className="relative z-10"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
-          {/* Cormorant Garamond italic eyebrow */}
-          <span className="font-display italic text-accent text-base md:text-lg tracking-wide mb-5 block drop-shadow-sm">
+          <span className="font-display italic text-accent text-base md:text-lg tracking-wide mb-5 block drop-shadow-[0_2px_4px_rgba(0,0,0,0.1)] md:drop-shadow-[0_0_1px_rgba(255,255,255,0.8)]">
             Premium Granite — Kishangarh, Rajasthan
           </span>
 
-          {/* Playfair Display H1 — generous tracking-tight for serif */}
-          <h1 className="text-foreground mb-6">
+          <h1 className="text-foreground mb-6 drop-shadow-[0_2px_10px_rgba(255,255,255,0.5)] md:drop-shadow-none">
             Stone of Distinction.<br />
             <span className="text-accent">Crafted in Kishangarh.</span>
           </h1>
 
-          <p className="text-foreground/75 text-lg mx-auto mb-10 max-w-[52ch]">
+          <p className="text-foreground/75 text-lg mx-auto mb-10 max-w-[52ch] drop-shadow-[0_1px_2px_white] md:drop-shadow-[0_0_1px_white]">
             Rajasthan Black Granite and Kharda Red Granite — quarried,
             processed, and supplied directly from Kishangarh to your project site.
           </p>

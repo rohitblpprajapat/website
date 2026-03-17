@@ -29,25 +29,25 @@ export default function LeadCapture() {
         className="object-cover"
         priority={false}
       />
-      {/* Strong dark overlay so text stays legible */}
-      <div className="absolute inset-0 bg-black/80 z-0" />
+      {/* Strong light overlay with glassmorphism */}
+      <div className="absolute inset-0 bg-background/80 backdrop-blur-sm z-0" />
 
       {/* Ambient glow accent */}
       <div className="absolute inset-0 z-0 opacity-20">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-glow h-glow bg-accent/30 rounded-full blur-glow" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-glow h-glow rounded-full blur-glow" />
       </div>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <motion.div
-           initial={{ opacity: 0, y: 30 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           viewport={{ once: true }}
-           transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >
           <div className="bg-accent/10 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-8 border border-accent/30">
             <FileText className="w-12 h-12 text-accent" />
           </div>
-          
+
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground mb-6 transition-colors">
             Get the 2026 Design & Architecture Catalog
           </h2>
@@ -57,22 +57,22 @@ export default function LeadCapture() {
 
           {!success ? (
             <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto">
-              <input 
-                type="text" 
-                required 
-                placeholder="Full Name / Company" 
+              <input
+                type="text"
+                required
+                placeholder="Full Name / Company"
                 className="flex-1 bg-background/50 border border-border rounded-full px-8 py-4 text-foreground focus:outline-none focus:border-gold transition-colors"
                 disabled={loading}
               />
-              <input 
-                type="email" 
-                required 
-                placeholder="Email Address" 
+              <input
+                type="email"
+                required
+                placeholder="Email Address"
                 className="flex-1 bg-background/50 border border-border rounded-full px-8 py-4 text-foreground focus:outline-none focus:border-gold transition-colors"
                 disabled={loading}
               />
-              <button 
-                type="submit" 
+              <button
+                type="submit"
                 disabled={loading}
                 className="bg-accent text-white px-10 py-4 rounded-full font-semibold hover:bg-accent/80 transition-colors flex items-center justify-center gap-2 group hover:scale-105"
               >
@@ -85,8 +85,8 @@ export default function LeadCapture() {
               </button>
             </form>
           ) : (
-            <motion.div 
-              initial={{ scale: 0.9, opacity: 0 }} 
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               className="bg-green-500/10 border border-green-500/30 text-green-400 p-8 rounded-2xl max-w-xl mx-auto backdrop-blur-sm"
             >

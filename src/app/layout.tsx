@@ -43,8 +43,8 @@ export default function RootLayout({
         <div className="fixed inset-0 bg-noise pointer-events-none z-50"></div>
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
-          forcedTheme="dark"
+          defaultTheme="light"
+          enableSystem
         >
           <Navbar />
           {children}

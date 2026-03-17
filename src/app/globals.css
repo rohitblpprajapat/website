@@ -64,7 +64,7 @@
 
 @keyframes kenBurns {
   from { transform: scale(1.0) translate(0, 0); }
-  to   { transform: scale(1.06) translate(-1%, -0.5%); }
+  to   { transform: scale(1.04) translate(-0.5%, -0.25%); }
 }
 
 @keyframes marquee {
@@ -84,9 +84,21 @@
   --grid-mask: radial-gradient(ellipse at center, black 10%, transparent 80%);
 }
 
-/* ── Theme — Dark Only ───────────────────────────── */
+/* ── Theme — Light Default ────────────────────────── */
 
-:root, .dark {
+:root {
+  --background: #FEFCF8;        /* premium creamy off-white */
+  --foreground: #1C1A17;        /* deep warm charcoal text */
+  --muted: #F5F0E8;             /* very soft stone for sections/cards */
+  --border: rgba(42, 41, 38, 0.1);
+  --accent: #C5A059;            /* Tiger Skin amber */
+  --noise-opacity: 0.015;       /* subtle noise for light theme */
+  --noise-blend-mode: multiply;
+}
+
+/* ── Theme — Dark Mode ───────────────────────────── */
+
+.dark {
   --background: #1C1A17;        /* deep warm charcoal */
   --foreground: #F0EBE3;        /* warm off-white text */
   --muted: #2A2620;             /* slightly lighter charcoal for cards */

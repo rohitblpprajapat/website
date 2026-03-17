@@ -61,36 +61,19 @@ export default function ProductShowcase() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.2, duration: 0.6 }}
-              className="group relative overflow-hidden rounded-card bg-muted border border-border shadow-sm hover:border-gold/50 hover:shadow-product transition-all duration-700"
+              className="group relative overflow-hidden rounded-card bg-background border border-border shadow-md hover:shadow-2xl transition-all duration-700"
             >
               <div className="aspect-[4/3] md:aspect-video relative overflow-hidden">
                 <Image 
                   src={product.image} 
                   alt={product.name}
                   fill
-                  className="object-cover transition-transform duration-1000 group-hover:scale-110 opacity-80 dark:opacity-60 group-hover:opacity-100"
+                  className="object-cover transition-transform duration-1000 group-hover:scale-110 opacity-90 dark:opacity-60 group-hover:opacity-100"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-muted via-muted/80 to-transparent z-10 transition-colors" />
               </div>
               
-              <div className="absolute bottom-0 left-0 right-0 p-8 md:p-10 z-20 transition-colors">
-                <h3 className="text-3xl font-heading font-bold mb-3 text-foreground transition-colors">{product.name}</h3>
-                <p className="text-foreground/70 mb-6 transition-colors duration-500 group-hover:text-foreground">
-                  {product.description}
-                </p>
-                
-                {/* Hover Reveal Specs */}
-                <div className="overflow-hidden h-0 group-hover:h-32 transition-all duration-700 ease-in-out opacity-0 group-hover:opacity-100 mb-0 group-hover:mb-4">
-                  <ul className="space-y-2 text-sm text-foreground/60 mb-6 border-l-2 border-accent pl-4 transition-colors">
-                    {product.specs.map((spec, i) => (
-                      <li key={i}>{spec}</li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <button className="w-full sm:w-auto bg-accent text-white px-8 py-3 rounded-full font-semibold hover:bg-foreground hover:text-background transition-all transform hover:scale-105 shadow-md hover:shadow-lg">
-                  Request Sample
-                </button>
+              <div className="absolute bottom-6 left-6 z-20 px-6 py-3 bg-background/60 backdrop-blur-md border border-white/20 rounded-xl shadow-lg transition-transform duration-500 group-hover:scale-105">
+                <h3 className="text-xl md:text-2xl font-heading font-bold text-foreground">{product.name}</h3>
               </div>
             </motion.div>
           ))}
