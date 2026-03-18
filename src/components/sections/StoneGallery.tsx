@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, Suspense } from "react";
+import { useSearchParams } from 'next/navigation';
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ZoomIn, ChevronLeft, ChevronRight, Search } from "lucide-react";
@@ -16,9 +17,28 @@ interface Stone {
 const stones: Stone[] = stonesData;
 
 export default function StoneGallery() {
-  const [activeTab, setActiveTab] = useState<string>("All");
+  return (
+    <Suspense fallback={<div className="py-20 text-center text-foreground/40 text-lg italic tracking-widest uppercase text-xs">Loading collection...</div>}>
+      <StoneGalleryContent />
+    </Suspense>
+  );
+}
+
+function StoneGalleryContent() {
   const [searchQuery, setSearchQuery] = useState("");
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
+  const searchParams = useSearchParams();
+  const categoryParam = searchParams.get('category');
+
+  const [activeTab, setActiveTab ] = useState(categoryParam || "All");
+  const [prevCategoryParam, setPrevCategoryParam] = useState(categoryParam);
+
+  // Sync tab with URL if it changes externally (e.g., from Navbar)
+  if (categoryParam !== prevCategoryParam) {
+    setPrevCategoryParam(categoryParam);
+    setActiveTab(categoryParam || "All");
+  }
 
   // Dynamically derive categories from data
   const categories = useMemo(() => {

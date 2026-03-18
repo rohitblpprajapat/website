@@ -28,18 +28,18 @@ const products = [
     image: "/assets/tiger-skin.png",
   },
   {
-    id: "rosy-pink",
-    name: "Rosy Pink Granite",
-    description: "One of the finest pink granites on the market with an admirable radiance. It is an igneous rock that's packed full of crystalline textures due to the presence of quartz.",
-    specs: ["Thickness: 16mm - 30mm", "Finish: Slabs, Tiles, Blocks", "Origin: Jalore, Rajasthan"],
-    image: "/assets/rosy-pink.png",
+    id: "kharda-red",
+    name: "Kharda Red Granite",
+    description: "A signature red granite from the Kharda quarries of Rajasthan. Known for its intense deep red tones and exceptional durability, making it a favorite for premium architectural projects.",
+    specs: ["Thickness: 16mm - 30mm", "Finish: High Gloss, Leathered", "Origin: Kharda, Rajasthan"],
+    image: "/assets/kharda-red.png",
   }
 ];
 
 export default function ProductShowcase() {
   return (
     <section id="collection" className="py-24 bg-background text-foreground relative transition-colors duration-300">
-      <div className="absolute top-0 right-0 w-1/3 h-[500px] bg-accent/10 blur-collection rounded-full pointer-events-none" />
+      <div className="absolute top-0 right-0 w-1/2 md:w-1/3 h-[300px] md:h-[500px] bg-accent/5 md:bg-accent/10 blur-2xl md:blur-collection rounded-full pointer-events-none" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 transition-colors">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div className="max-w-2xl">
@@ -55,8 +55,9 @@ export default function ProductShowcase() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {products.map((product, idx) => (
-            <motion.div 
+            <motion.div
               key={product.id}
+              id={product.id}
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -64,14 +65,14 @@ export default function ProductShowcase() {
               className="group relative overflow-hidden rounded-card bg-background border border-border shadow-md hover:shadow-2xl transition-all duration-700"
             >
               <div className="aspect-[4/3] md:aspect-video relative overflow-hidden">
-                <Image 
-                  src={product.image} 
+                <Image
+                  src={product.image}
                   alt={product.name}
                   fill
                   className="object-cover transition-transform duration-1000 group-hover:scale-110 opacity-90 dark:opacity-60 group-hover:opacity-100"
                 />
               </div>
-              
+
               <div className="absolute bottom-6 left-6 z-20 px-6 py-3 bg-background/60 backdrop-blur-md border border-white/20 rounded-xl shadow-lg transition-transform duration-500 group-hover:scale-105">
                 <h3 className="text-xl md:text-2xl font-heading font-bold text-foreground">{product.name}</h3>
               </div>

@@ -12,7 +12,7 @@
 
   /* Material-inspired stone palette */
   --color-stone-black: #2A2926;      /* Rajasthan Black charcoal */
-  --color-stone-amber: #C5A059;      /* Tiger Skin warm amber */
+  --color-stone-amber: #FDC421;      /* Updated secondary brand color */
   --color-stone-blush: #C4A89A;      /* Rosy Pink dusty blush */
   --color-stone-dust: #C9B99A;       /* Granite dust warm neutral */
   --color-stone-cream: #F5F0E8;      /* Premium off-white / Antolini-inspired */
@@ -46,8 +46,8 @@
   --spacing-glow: 600px;
 
   /* ── Shadows ─────────────────────────────────── */
-  --shadow-glow-amber: 0 0 40px rgba(197,160,89,0.25);
-  --shadow-card: 0 8px 30px rgba(197,160,89,0.08);
+  --shadow-glow-amber: 0 0 40px rgba(253,196,33,0.25);
+  --shadow-card: 0 8px 30px rgba(253,196,33,0.08);
   --shadow-product: 0 20px 40px rgba(42,41,38,0.12);
 
   /* ── Animations ──────────────────────────────── */
@@ -91,7 +91,7 @@
   --foreground: #1C1A17;        /* deep warm charcoal text */
   --muted: #F5F0E8;             /* very soft stone for sections/cards */
   --border: rgba(42, 41, 38, 0.1);
-  --accent: #C5A059;            /* Tiger Skin amber */
+  --accent: #FDC421;            /* Updated secondary brand color */
   --noise-opacity: 0.015;       /* subtle noise for light theme */
   --noise-blend-mode: multiply;
 }
@@ -102,8 +102,8 @@
   --background: #1C1A17;        /* deep warm charcoal */
   --foreground: #F0EBE3;        /* warm off-white text */
   --muted: #2A2620;             /* slightly lighter charcoal for cards */
-  --border: rgba(197,160,89,0.15);
-  --accent: #C5A059;            /* Tiger Skin amber */
+  --border: rgba(253,196,33,0.15);
+  --accent: #FDC421;            /* Updated secondary brand color */
   --noise-opacity: 0.02;
   --noise-blend-mode: screen;
 }

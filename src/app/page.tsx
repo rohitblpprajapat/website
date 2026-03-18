@@ -12,9 +12,9 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground selection:bg-accent selection:text-background pb-0 overflow-x-hidden transition-colors">
       <HeroSection />
+      <ProductShowcase />
       <TrustSection />
       <ApplicationsGallery />
-      <ProductShowcase />
       <HowItWorks />
       <Testimonials />
       <FAQ />

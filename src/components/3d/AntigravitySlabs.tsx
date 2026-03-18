@@ -2,14 +2,14 @@
 
 import { useThree, Canvas } from "@react-three/fiber";
 import { Float, Environment, ContactShadows, PresentationControls, useTexture } from "@react-three/drei";
-import { Suspense, useRef, useMemo } from "react";
+import { Suspense, useRef, useMemo, useLayoutEffect } from "react";
 import * as THREE from "three";
 
 // Design Tokens for 3D Elements — stay in sync with globals.css stone palette
 const STONE_COLORS = {
   rajasthanBlack: "#2A2926",
   khardaRed: "#8B4513",        // SaddleBrown-ish for Kharda Red
-  tigerSkin: "#C5A059",
+  tigerSkin: "#FDC421",
 } as const;
 
 const TEXTURES = {
@@ -31,7 +31,10 @@ function Slab({ position, rotation, color, texturePath, scale }: SlabProps) {
   const texture = useTexture(texturePath);
 
   // Ensure texture repeats nicely if needed, though slabs are fixed size
-  texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+  useLayoutEffect(() => {
+    // eslint-disable-next-line react-hooks/immutability
+    texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+  }, [texture]);
 
   return (
     <Float

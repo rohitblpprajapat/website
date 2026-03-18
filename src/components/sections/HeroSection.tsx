@@ -36,8 +36,8 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-grid z-0" />
 
       {/* Bottom gradient fade for smooth section blending */}
-      <div className="absolute inset-x-0 bottom-0 h-1/3 z-0 pointer-events-none bg-gradient-to-t from-background to-transparent" />
-      <div className="absolute inset-x-0 top-0 h-1/4 z-0 pointer-events-none bg-gradient-to-b from-background/60 to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 h-1/6 md:h-1/3 z-0 pointer-events-none bg-gradient-to-t from-background to-transparent" />
+      <div className="absolute inset-x-0 top-0 h-1/10 md:h-1/4 z-0 pointer-events-none bg-gradient-to-b from-background/60 to-transparent" />
 
       {/* Scale Reference — bottom left, subtle */}
       <div className="absolute bottom-24 left-8 md:left-12 flex items-center gap-3 z-20 opacity-40 pointer-events-none">
@@ -49,7 +49,7 @@ export default function HeroSection() {
         style={{ y, opacity }}
         className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center pointer-events-none"
       >
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[140%] bg-[radial-gradient(circle_at_center,var(--background)_0%,transparent_75%)] opacity-70 md:opacity-60 blur-3xl z-0 pointer-events-none" />
+        {/* Center content container - radial glow removed */}
         
         <motion.div
           className="relative z-10"

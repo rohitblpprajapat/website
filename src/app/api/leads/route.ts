@@ -10,7 +10,7 @@ export async function POST(request: Request) {
     console.log('Lead captured:', body);
     
     return NextResponse.json({ success: true, message: "Catalog requested successfully!" }, { status: 200 });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ success: false, message: "Failed to process request" }, { status: 500 });
   }
 }

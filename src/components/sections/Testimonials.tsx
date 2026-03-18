@@ -128,9 +128,9 @@ export default function Testimonials() {
         </div>
       </div>
 
-      {/* Edge fade overlays */}
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-background to-transparent z-10" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-background to-transparent z-10" />
+      {/* Edge fade overlays - significantly reduced on mobile to prevent content blur */}
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-1 md:w-24 bg-gradient-to-r from-background to-transparent z-10" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1 md:w-24 bg-gradient-to-l from-background to-transparent z-10" />
     </section>
   );
 }
