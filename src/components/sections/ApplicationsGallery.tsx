@@ -21,10 +21,19 @@ const highlights = [
 
 function StoneCard({ stone }: { stone: typeof highlights[0] }) {
   return (
-    <div className="relative w-40 h-52 shrink-0 mx-2 rounded-xl overflow-hidden group cursor-pointer">
-      <Image src={stone.src} alt={stone.name} fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="165px" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent" />
-      <p className="absolute bottom-3 left-3 right-3 text-white text-xs font-semibold leading-tight z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">{stone.name}</p>
+    <div className="relative w-72 h-96 md:h-[500px] shrink-0 mx-3 rounded-2xl overflow-hidden group cursor-pointer border border-white/5 shadow-2xl">
+      <Image 
+        src={stone.src} 
+        alt={stone.name} 
+        fill 
+        className="object-cover transition-transform duration-1000 group-hover:scale-110" 
+        sizes="350px" 
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
+      <div className="absolute bottom-6 left-6 right-6 translate-y-2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 z-10">
+        <p className="text-white text-base font-bold tracking-tight mb-1">{stone.name}</p>
+        <p className="text-accent text-[10px] font-bold uppercase tracking-widest">Premium Selection</p>
+      </div>
     </div>
   );
 }
