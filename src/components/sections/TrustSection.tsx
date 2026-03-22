@@ -41,6 +41,7 @@ export default function TrustSection() {
         alt="White Onyx background"
         fill
         className="object-cover opacity-[0.07] dark:opacity-[0.05] pointer-events-none"
+        sizes="100vw"
       />
       <div className="absolute inset-0 bg-background/40 pointer-events-none" />
 

@@ -70,6 +70,7 @@ export default function ProductShowcase() {
                   alt={product.name}
                   fill
                   className="object-cover transition-transform duration-1000 group-hover:scale-110 opacity-90 dark:opacity-60 group-hover:opacity-100"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
 

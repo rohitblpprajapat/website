@@ -1,12 +1,15 @@
+import dynamic from 'next/dynamic';
 import HeroSection from '@/components/sections/HeroSection';
-import TrustSection from '@/components/sections/TrustSection';
-import ApplicationsGallery from '@/components/sections/ApplicationsGallery';
 import ProductShowcase from '@/components/sections/ProductShowcase';
-import HowItWorks from '@/components/sections/HowItWorks';
-import Testimonials from '@/components/sections/Testimonials';
-import FAQ from '@/components/sections/FAQ';
-import LeadCapture from '@/components/sections/LeadCapture';
 import FloatingWhatsApp from '@/components/layout/FloatingWhatsApp';
+
+// Dynamically import below-the-fold sections for performance
+const TrustSection = dynamic(() => import('@/components/sections/TrustSection'));
+const ApplicationsGallery = dynamic(() => import('@/components/sections/ApplicationsGallery'));
+const AboutSection = dynamic(() => import('@/components/sections/AboutSection'));
+const Testimonials = dynamic(() => import('@/components/sections/Testimonials'));
+const FAQ = dynamic(() => import('@/components/sections/FAQ'));
+const LeadCapture = dynamic(() => import('@/components/sections/LeadCapture'));
 
 export default function Home() {
   return (
@@ -15,7 +18,7 @@ export default function Home() {
       <ProductShowcase />
       <TrustSection />
       <ApplicationsGallery />
-      <HowItWorks />
+      <AboutSection />
       <Testimonials />
       <FAQ />
       <LeadCapture />

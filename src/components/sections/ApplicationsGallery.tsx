@@ -27,7 +27,7 @@ function StoneCard({ stone }: { stone: typeof highlights[0] }) {
         alt={stone.name} 
         fill 
         className="object-cover transition-transform duration-1000 group-hover:scale-110" 
-        sizes="350px" 
+        sizes="(max-width: 768px) 288px, 350px" 
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
       <div className="absolute bottom-6 left-6 right-6 translate-y-2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 z-10">

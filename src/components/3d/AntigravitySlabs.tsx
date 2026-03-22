@@ -158,7 +158,15 @@ export default function AntigravitySlabs() {
       <Canvas 
         shadows={{ type: THREE.PCFShadowMap }}
         camera={{ position: [0, 0, 9], fov: 45 }}
-        gl={{ antialias: true }}
+        gl={{ 
+          antialias: true,
+          powerPreference: "high-performance",
+          alpha: true,
+          preserveDrawingBuffer: false
+        }}
+        onCreated={({ gl }) => {
+          gl.setClearColor(new THREE.Color('#000000'), 0);
+        }}
       >
         <Scene />
       </Canvas>

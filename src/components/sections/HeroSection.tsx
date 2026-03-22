@@ -25,6 +25,7 @@ export default function HeroSection() {
           fill
           className="object-cover opacity-20 scale-110 animate-ken-burns"
           priority
+          sizes="100vw"
         />
         {/* Dark vignette overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background/80" />

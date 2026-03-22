@@ -7,36 +7,32 @@ import Image from "next/image";
 
 const faqs = [
   {
-    q: "What is the minimum order quantity?",
-    a: "Our minimum order is 50 square feet. For custom cut projects we recommend sharing your full layout so we can optimise slab yield and reduce wastage.",
+    q: "Where is AAA Marble located and why does it matter?",
+    a: "AAA Marble is headquartered in Kishangarh, Rajasthan—the stone capital of the world. Being at the source allows us to offer the finest selection, competitive pricing, and direct access to premium quarries without middlemen markups.",
   },
   {
-    q: "Do you offer samples before we place a full order?",
-    a: "Yes. We dispatch a sample slab (approx. 12\" × 12\") so you can check the colour, veining, and finish in person. Courier cost is charged at actuals and credited toward your first order.",
+    q: "What types of stone does AAA Marble specialize in?",
+    a: "We offer an extensive collection of Italian Marble, Imported Marble, and premium Indian Marble (like Makrana and Morwad). Our range also includes high-quality natural Granite, Onyx, and Sandstone for diverse architectural needs.",
   },
   {
-    q: "What finishes are available?",
-    a: "We offer polished, honed, leather (brushed), and bush-hammered finishes on all our granites. Let us know your preference when enquiring.",
+    q: "How does AAA Marble ensure the quality of every slab?",
+    a: "Our experts have decades of experience in selecting the finest blocks with unique veining and superior structural integrity. Every slab undergoes rigorous quality inspections for thickness, finish, and durability before being approved.",
   },
   {
-    q: "How long does it take from order confirmation to delivery?",
-    a: "Standard lead time is 10–15 working days for processing, plus transit time depending on your location. We'll confirm a precise delivery window at the time of order.",
+    q: "Is marble a good long-term investment for my home?",
+    a: "Absolutely. Marble is incredibly durable and, with proper care, can last for generations. Its timeless beauty creates an air of luxury that adds significant long-term value to any property.",
   },
   {
-    q: "What thicknesses do you supply?",
-    a: "We supply 16mm, 18mm, and 20mm as standard for countertops and flooring. Thicknesses up to 30mm can be arranged for special architectural applications — just ask.",
+    q: "How do I choose between Italian and Indian marble for my project?",
+    a: "Italian marble is preferred for luxury interior spaces and wall cladding due to its superior luster and unique patterns. Indian marble is an excellent choice for flooring in high-traffic areas and projects requiring exceptional durability and budget-friendliness.",
   },
   {
-    q: "Can you supply cut-to-size pieces?",
-    a: "Yes. Share your layout drawings or cut-sheet and we will process the required pieces. Cut-to-size orders require a minimum lead time of 15–20 working days.",
+    q: "Does AAA Marble have a transparent pricing policy?",
+    a: "Yes, we are committed to fair and honest trade. We follow a strict 'No Hidden Price' policy, ensuring the quote you receive is comprehensive and transparent from the start.",
   },
   {
-    q: "How is freight handled?",
-    a: "Slabs are packed in wooden crates with edge protection and sent via road freight. We coordinate logistics to your site or freight forwarder at Kishangarh. All shipments are insured.",
-  },
-  {
-    q: "What are the payment terms?",
-    a: "We work on a 50% advance for first-time orders, with the balance before dispatch. Repeat customers may qualify for credit terms after the first two orders.",
+    q: "How long does delivery take and where do you ship?",
+    a: "We deliver across India and export globally. Standard delivery takes 15-25 days depending on your location. We coordinate with trusted shipping partners to ensure your stone arrives in perfect condition.",
   },
 ];
 

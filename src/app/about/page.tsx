@@ -2,6 +2,7 @@ import FloatingWhatsApp from "@/components/layout/FloatingWhatsApp";
 import Image from "next/image";
 import AboutHeader from "@/components/sections/AboutHeader";
 import { Award, Globe, ShieldCheck, Heart, Zap, History } from "lucide-react";
+import Link from "next/link";
 
 export const metadata = {
   title: "About Us | AAAStonex",
@@ -119,8 +120,8 @@ export default function AboutPage() {
                 Connect with our consultants today and discover how AAAStonex can elevate your next project with the world&apos;s most exquisite stone collection.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#quote" className="px-10 py-4 bg-white text-accent font-bold rounded-full hover:scale-105 transition-transform">Inquire Now</a>
-                <a href="/collections" className="px-10 py-4 bg-transparent border-2 border-white/30 text-white font-bold rounded-full hover:bg-white/10 transition-all">Explore Collection</a>
+                <Link href="/contact" className="px-10 py-4 bg-white text-accent font-bold rounded-full hover:scale-105 transition-transform">Inquire Now</Link>
+                <Link href="/collections" className="px-10 py-4 bg-transparent border-2 border-white/30 text-white font-bold rounded-full hover:bg-white/10 transition-all">Explore Collection</Link>
               </div>
             </div>
           </div>

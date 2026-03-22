@@ -16,6 +16,7 @@ export default function Navbar() {
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/about' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   const rajasthanProducts = [
@@ -51,7 +52,8 @@ export default function Navbar() {
                 alt="AAAStonex Logo"
                 width={120}
                 height={40}
-                className="object-contain h-10 w-auto opacity-90 hover:opacity-100 transition-opacity"
+                style={{ width: 'auto', height: '40px' }}
+                className="object-contain opacity-90 hover:opacity-100 transition-opacity"
                 priority
               />
             </div>
@@ -60,10 +62,12 @@ export default function Navbar() {
               <Image
                 src={fullLogo}
                 alt="AAAStonex Full Logo"
-                width={200} // Adjusted for SVG
-                height={60}
-                className="object-contain h-12 w-auto opacity-90 hover:opacity-100 transition-opacity"
+                width={180}
+                height={48}
+                style={{ width: 'auto', height: '48px' }}
+                className="object-contain opacity-90 hover:opacity-100 transition-opacity"
                 priority
+                unoptimized
               />
             </div>
           </Link>
@@ -94,23 +98,28 @@ export default function Navbar() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
-                    className="absolute top-full left-0 mt-2 w-72 bg-background/95 backdrop-blur-xl border border-border rounded-xl shadow-2xl overflow-hidden z-50 grid grid-cols-1 p-2 gap-1"
+                    className="absolute top-full left-0 mt-2 w-72 bg-background/95 backdrop-blur-xl border border-border rounded-xl shadow-2xl overflow-hidden z-50 flex flex-col"
                   >
-                    {categories.map((cat) => (
+                    <div className="px-5 py-3 border-b border-border/50 bg-accent/5">
+                      <p className="text-[10px] uppercase tracking-[0.2em] text-accent font-bold">Stone Categories</p>
+                    </div>
+                    <div className="p-2 gap-1 grid grid-cols-1">
+                      {categories.map((cat) => (
+                        <Link
+                          key={cat}
+                          href={`/collections?category=${encodeURIComponent(cat)}`}
+                          className="flex items-center p-3 rounded-lg hover:bg-accent/5 transition-colors group"
+                        >
+                          <span className="text-xs font-bold text-foreground group-hover:text-accent transition-colors uppercase tracking-widest">{cat}</span>
+                        </Link>
+                      ))}
                       <Link
-                        key={cat}
-                        href={`/collections?category=${encodeURIComponent(cat)}`}
-                        className="flex items-center p-3 rounded-lg hover:bg-accent/5 transition-colors group"
+                        href="/collections"
+                        className="flex items-center p-3 rounded-lg bg-accent/5 hover:bg-accent/10 transition-colors group mt-1"
                       >
-                        <span className="text-xs font-bold text-foreground group-hover:text-accent transition-colors uppercase tracking-widest">{cat}</span>
+                        <span className="text-xs font-bold text-accent uppercase tracking-widest">View All Varieties</span>
                       </Link>
-                    ))}
-                    <Link
-                      href="/collections"
-                      className="flex items-center p-3 rounded-lg bg-accent/5 hover:bg-accent/10 transition-colors group mt-1"
-                    >
-                      <span className="text-xs font-bold text-accent uppercase tracking-widest">View All Varieties</span>
-                    </Link>
+                    </div>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -166,7 +175,7 @@ export default function Navbar() {
               </Link>
             ))}
 
-            <Link href="#quote" className="px-8 py-3 bg-accent text-white text-xs font-bold uppercase tracking-widest hover:scale-105 transition-all shadow-md hover:shadow-lg">
+            <Link href="/contact" className="px-8 py-3 bg-accent text-white text-xs font-bold uppercase tracking-widest hover:scale-105 transition-all shadow-md hover:shadow-lg">
               Get a Quote
             </Link>
           </div>
@@ -241,7 +250,7 @@ export default function Navbar() {
               ))}
               <div className="px-4 pt-4">
                 <Link
-                  href="#quote"
+                  href="/contact"
                   onClick={() => setIsOpen(false)}
                   className="block w-full text-center px-8 py-4 bg-accent text-background text-sm font-bold uppercase tracking-widest rounded-xl shadow-lg"
                 >
