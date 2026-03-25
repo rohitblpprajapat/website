@@ -177,7 +177,7 @@ export default function ContactPage() {
           className="mt-20 h-[500px] rounded-3xl overflow-hidden grayscale brightness-90 contrast-125 border border-border relative group"
         >
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3570.627341852033!2d74.8385311!3d26.5642438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396be1e550e50fd3%3A0xe677519639556cd3!2sAAA%20STONEX!5e0!3m2!1sen!2sin!4v1711350000000!5m2!1sen!2sin" 
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3565.354422967156!2d74.853443!3d26.669145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjbCsDQwJzA4LjkiTiA3NMKwNTEnMTIuNCJF!5e0!3m2!1sen!2sin!4v1774422227883!5m2!1sen!2sin" 
             width="100%" 
             height="100%" 
             style={{ border: 0 }} 
