@@ -8,20 +8,20 @@ const contactDetails = [
   {
     icon: MapPin,
     title: "Visit Our Showroom",
-    details: ["Plot No. 42, Industrial Area", "Phase II, Kishangarh", "Rajasthan 305801, India"],
-    link: "https://maps.google.com"
+    details: ["KH.978/970 & 1053/980", "Village-Khatoli, Kishangarh", "Rajasthan 305801, India"],
+    link: "https://maps.app.goo.gl/J4koWVZ45JEixudEA?g_st=ac"
   },
   {
     icon: Phone,
     title: "Call or WhatsApp",
-    details: ["+91 98765 43210", "+91 1463 245678"],
-    link: "https://wa.me/919876543210"
+    details: ["+91 95713 56596", "+91 90016 29580"],
+    link: "https://wa.me/919571356596"
   },
   {
     icon: Mail,
     title: "Email Enquiries",
-    details: ["sales@aaastonex.com", "info@aaastonex.com"],
-    link: "mailto:sales@aaastonex.com"
+    details: ["Aaastonex07@gmail.com"],
+    link: "mailto:Aaastonex07@gmail.com"
   },
   {
     icon: Clock,
@@ -47,7 +47,7 @@ export default function ContactPage() {
             Begin Your Stone Journey
           </span>
           <h1 className="text-5xl md:text-7xl font-heading font-bold mb-6 text-foreground tracking-tight">
-            Connect with <span className="italic font-display text-accent">AAA Marble</span>
+            Connect with <span className="italic font-display text-accent">AAA STONEX</span>
           </h1>
           <p className="max-w-2xl mx-auto text-foreground/60 text-lg font-light leading-relaxed">
             From custom dimensions to global logistics—our team in Kishangarh is ready to assist with your most ambitious projects.
@@ -177,7 +177,7 @@ export default function ContactPage() {
           className="mt-20 h-[500px] rounded-3xl overflow-hidden grayscale brightness-90 contrast-125 border border-border relative group"
         >
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14282.46416954254!2d74.869!3d26.577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDM0JzM3LjIiTiA3NMKwNTInMDguNCJF!5e0!3m2!1sen!2sin!4v1711000000000!5m2!1sen!2sin" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3570.627341852033!2d74.8385311!3d26.5642438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396be1e550e50fd3%3A0xe677519639556cd3!2sAAA%20STONEX!5e0!3m2!1sen!2sin!4v1711350000000!5m2!1sen!2sin" 
             width="100%" 
             height="100%" 
             style={{ border: 0 }} 

@@ -18,7 +18,7 @@ export default function AboutSection() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <span className="font-display italic text-accent text-lg tracking-wide mb-4 block">
-              The AAA Heritage
+              The AAA STONEX Heritage
             </span>
             <h2 className="text-4xl md:text-5xl font-heading font-bold mb-8 leading-tight">
               Crafting <span className="italic font-display text-accent">Nature&apos;s</span> <br /> 
@@ -27,7 +27,7 @@ export default function AboutSection() {
             
             <div className="space-y-6 text-foreground/70 text-lg leading-relaxed">
               <p>
-                Founded in the heart of Kishangarh, Rajasthan—the marble capital of India—AAA Marble represents a legacy of uncompromising quality and direct-from-source authenticity.
+              Founded in the heart of Kishangarh, Rajasthan—the marble capital of India—AAA STONEX represents a legacy of uncompromising quality and direct-from-source authenticity.
               </p>
               <p>
                 Our journey begins at the legendary quarries, where we hand-select the finest blocks of natural stone. We believe that every vein and crystal in a marble slab is a testament to millions of years of geological history, and our role is to preserve that beauty through precision processing.

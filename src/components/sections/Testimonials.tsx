@@ -9,7 +9,7 @@ const testimonials = [
     role: "MD",
     company: "Kumar Builders & Developers",
     location: "Jaipur",
-    text: "AAAStonex delivered Rajasthan Black granite for our commercial project on time and within spec. Thickness consistency and mirror polish were exactly right. Will reorder.",
+    text: "AAA STONEX delivered Rajasthan Black granite for our commercial project on time and within spec. Thickness consistency and mirror polish were exactly right. Will reorder.",
     rating: 5,
   },
   {
@@ -25,7 +25,7 @@ const testimonials = [
     role: "Project Architect",
     company: "Singh Architects",
     location: "Ahmedabad",
-    text: "We source stone from Kishangarh regularly. AAAStonex stands out — responsive team, no surprises on quality. The Crystal Blue we ordered exceeded expectations.",
+    text: "We source stone from Kishangarh regularly. AAA STONEX stands out — responsive team, no surprises on quality. The Crystal Blue we ordered exceeded expectations.",
     rating: 5,
   },
   {

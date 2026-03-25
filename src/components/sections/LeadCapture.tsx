@@ -91,7 +91,7 @@ export default function LeadCapture() {
               className="bg-green-500/10 border border-green-500/30 text-green-400 p-8 rounded-2xl max-w-xl mx-auto backdrop-blur-sm"
             >
               <h3 className="text-3xl font-bold mb-3">Success!</h3>
-              <p className="text-lg">Your catalog is downloading. Check your email for further pricing details from AAAStonex.</p>
+              <p className="text-lg">Your catalog is downloading. Check your email for further pricing details from AAA STONEX.</p>
             </motion.div>
           )}
         </motion.div>

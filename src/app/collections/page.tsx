@@ -3,8 +3,8 @@ import FloatingWhatsApp from "@/components/layout/FloatingWhatsApp";
 import CollectionsHeader from "@/components/sections/CollectionsHeader";
 
 export const metadata = {
-  title: "Stone Collection | AAAStonex",
-  description: "Explore our curated gallery of 54+ premium stone varieties including Marble, Onyx, and Granite.",
+  title: "Stone Collection | AAA STONEX",
+  description: "Explore our curated gallery of premium stone varieties including Marble, Onyx, and Granite.",
 };
 
 export default function CollectionsPage() {

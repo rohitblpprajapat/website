@@ -19,7 +19,7 @@ export default function MasonryShowcase() {
         <div className="mb-16">
           <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4">Design Inspiration</h2>
           <p className="text-gray-600 dark:text-gray-400 text-lg transition-colors">
-            See how AAAStonex transforms spaces.
+            See how AAA STONEX transforms spaces.
           </p>
         </div>
 

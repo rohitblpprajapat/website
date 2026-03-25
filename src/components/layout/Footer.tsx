@@ -12,7 +12,7 @@ export default function Footer() {
               <div className="md:hidden">
                 <Image 
                   src="/assets/logo-black.png" 
-                  alt="AAAStonex Logo" 
+                  alt="AAA STONEX Logo" 
                   width={100}
                   height={35} 
                   className="object-contain opacity-90"
@@ -22,7 +22,7 @@ export default function Footer() {
               <div className="hidden md:block">
                 <Image 
                   src="/assets/logo-black.svg" 
-                  alt="AAAStonex Full Logo" 
+                  alt="AAA STONEX Full Logo" 
                   width={180}
                   height={50} 
                   className="object-contain opacity-90"
@@ -30,7 +30,10 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-foreground/70 text-sm leading-relaxed max-w-md transition-colors">
-              Premium marble and granite manufacturer based in Kishangarh, Rajasthan. 5 years of craftsmanship and excellence in every slab.
+              Premium marble and granite manufacturer based in Kishangarh, Rajasthan. Direct-from-source excellence in every slab.
+            </p>
+            <p className="text-foreground/50 text-[10px] mt-2 uppercase tracking-widest font-bold">
+              GSTIN: 08ENPPR7157P1ZP
             </p>
           </div>
           <div>
@@ -44,13 +47,17 @@ export default function Footer() {
           <div>
             <h3 className="text-foreground font-semibold mb-4 transition-colors">Contact</h3>
             <ul className="space-y-2 text-sm text-foreground/70 transition-colors">
-              <li>Kishangarh, Rajasthan</li>
-              <li>info@aaastonex.com</li>
+              <li className="leading-relaxed">
+                KH.978/970 & 1053/980,<br />
+                Village-Khatoli, Kishangarh,<br />
+                Rajasthan - 305801
+              </li>
+              <li><a href="mailto:Aaastonex07@gmail.com" className="hover:text-accent transition-colors">Aaastonex07@gmail.com</a></li>
             </ul>
           </div>
         </div>
         <div className="mt-16 pt-8 border-t border-border text-center text-sm text-foreground/50 transition-colors">
-          <p>&copy; {new Date().getFullYear()} AAAStonex. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} AAA STONEX. All rights reserved.</p>
         </div>
       </div>
     </footer>

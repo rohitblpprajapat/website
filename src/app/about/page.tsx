@@ -5,8 +5,8 @@ import { Award, Globe, ShieldCheck, Heart, Zap, History } from "lucide-react";
 import Link from "next/link";
 
 export const metadata = {
-  title: "About Us | AAAStonex",
-  description: "Learn about AAAStonex, our 5 years of craftsmanship, and our commitment to providing the highest quality natural stone.",
+  title: "About Us | AAA STONEX",
+  description: "Learn about AAA STONEX, our legacy of craftsmanship, and our commitment to providing the highest quality natural stone directly from the source.",
 };
 
 export default function AboutPage() {
@@ -48,10 +48,10 @@ export default function AboutPage() {
               
               <div className="space-y-6 text-foreground/70 text-lg leading-relaxed font-light">
                 <p>
-                  Based in the heart of Kishangarh, Rajasthan &mdash; the marble city of India &mdash; AAAStonex has established itself as a premier manufacturer and supplier of high-quality granite and marble.
+                  Based in the heart of Kishangarh, Rajasthan &mdash; the marble city of India &mdash; AAA STONEX has established itself as a premier manufacturer and supplier of high-quality granite and marble.
                 </p>
                 <p>
-                  With over 5 years of deep industry expertise under our parent company and operating successfully under the AAAStonex brand, we are committed to delivering natural masterpieces. 
+                  With a deep industry expertise and operating successfully under the AAA STONEX brand, we are committed to delivering natural masterpieces. 
                 </p>
                 <p>
                   From the deep consistency of Rajasthan Black to the striking hues of Kharda Red, our stones form the foundation of architectural marvels across the nation.
@@ -117,7 +117,7 @@ export default function AboutPage() {
             <div className="relative z-10">
               <h2 className="text-4xl md:text-6xl font-heading font-bold mb-8 tracking-tighter">Ready to Build Your Legacy?</h2>
               <p className="text-white/80 text-lg mb-10 max-w-2xl mx-auto font-light leading-relaxed">
-                Connect with our consultants today and discover how AAAStonex can elevate your next project with the world&apos;s most exquisite stone collection.
+                Connect with our consultants today and discover how AAA STONEX can elevate your next project with the world&apos;s most exquisite stone collection.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact" className="px-10 py-4 bg-white text-accent font-bold rounded-full hover:scale-105 transition-transform">Inquire Now</Link>

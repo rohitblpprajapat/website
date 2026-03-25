@@ -49,7 +49,7 @@ export default function Navbar() {
             <div className="md:hidden">
               <Image
                 src={smallLogo}
-                alt="AAAStonex Logo"
+                alt="AAA STONEX Logo"
                 width={120}
                 height={40}
                 style={{ width: 'auto', height: '40px' }}
@@ -61,7 +61,7 @@ export default function Navbar() {
             <div className="hidden md:block">
               <Image
                 src={fullLogo}
-                alt="AAAStonex Full Logo"
+                alt="AAA STONEX Full Logo"
                 width={180}
                 height={48}
                 style={{ width: 'auto', height: '48px' }}

@@ -25,8 +25,8 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "AAAStonex | Premium Marble & Granite",
-  description: "High-converting B2B/B2C website for Rajasthan Black Granite and Kharda Red Granite.",
+  title: "AAA STONEX | Premium Marble & Granite",
+  description: "High-quality natural stone manufacturer and exporter. Specializing in Rajasthan Black and Kharda Red Granite.",
 };
 
 export default function RootLayout({

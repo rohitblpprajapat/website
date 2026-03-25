@@ -7,15 +7,15 @@ import Image from "next/image";
 
 const faqs = [
   {
-    q: "Where is AAA Marble located and why does it matter?",
-    a: "AAA Marble is headquartered in Kishangarh, Rajasthan—the stone capital of the world. Being at the source allows us to offer the finest selection, competitive pricing, and direct access to premium quarries without middlemen markups.",
+    q: "Where is AAA STONEX located and why does it matter?",
+    a: "AAA STONEX is headquartered in Kishangarh, Rajasthan—the stone capital of the world. Being at the source allows us to offer the finest selection, competitive pricing, and direct access to premium quarries without middlemen markups.",
   },
   {
-    q: "What types of stone does AAA Marble specialize in?",
+    q: "What types of stone does AAA STONEX specialize in?",
     a: "We offer an extensive collection of Italian Marble, Imported Marble, and premium Indian Marble (like Makrana and Morwad). Our range also includes high-quality natural Granite, Onyx, and Sandstone for diverse architectural needs.",
   },
   {
-    q: "How does AAA Marble ensure the quality of every slab?",
+    q: "How does AAA STONEX ensure the quality of every slab?",
     a: "Our experts have decades of experience in selecting the finest blocks with unique veining and superior structural integrity. Every slab undergoes rigorous quality inspections for thickness, finish, and durability before being approved.",
   },
   {
@@ -27,7 +27,7 @@ const faqs = [
     a: "Italian marble is preferred for luxury interior spaces and wall cladding due to its superior luster and unique patterns. Indian marble is an excellent choice for flooring in high-traffic areas and projects requiring exceptional durability and budget-friendliness.",
   },
   {
-    q: "Does AAA Marble have a transparent pricing policy?",
+    q: "Does AAA STONEX have a transparent pricing policy?",
     a: "Yes, we are committed to fair and honest trade. We follow a strict 'No Hidden Price' policy, ensuring the quote you receive is comprehensive and transparent from the start.",
   },
   {
@@ -107,7 +107,7 @@ export default function FAQ() {
             <p className="text-foreground/50 text-sm">
               Didn&apos;t find what you&apos;re looking for?{" "}
               <a
-                href="https://wa.me/919982000000"
+                href="https://wa.me/919571356596"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-accent underline underline-offset-2 hover:text-foreground transition-colors"
