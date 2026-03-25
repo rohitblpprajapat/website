@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { Mail, MapPin } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -10,21 +11,21 @@ export default function Footer() {
             <Link href="/" className="inline-block mb-6">
               {/* Mobile Logo */}
               <div className="md:hidden">
-                <Image 
-                  src="/assets/logo-black.png" 
-                  alt="AAA STONEX Logo" 
+                <Image
+                  src="/assets/logo-black.png"
+                  alt="AAA STONEX Logo"
                   width={100}
-                  height={35} 
+                  height={35}
                   className="object-contain opacity-90"
                 />
               </div>
               {/* Desktop Logo */}
               <div className="hidden md:block">
-                <Image 
-                  src="/assets/logo-black.svg" 
-                  alt="AAA STONEX Full Logo" 
+                <Image
+                  src="/assets/logo-black.svg"
+                  alt="AAA STONEX Full Logo"
                   width={180}
-                  height={50} 
+                  height={50}
                   className="object-contain opacity-90"
                 />
               </div>
@@ -46,13 +47,22 @@ export default function Footer() {
           </div>
           <div>
             <h3 className="text-foreground font-semibold mb-4 transition-colors">Contact</h3>
-            <ul className="space-y-2 text-sm text-foreground/70 transition-colors">
-              <li className="leading-relaxed">
-                KH.978/970 & 1053/980,<br />
-                Village-Khatoli, Kishangarh,<br />
-                Rajasthan - 305801
+            <ul className="space-y-4 text-sm text-foreground/70 transition-colors">
+              <li className="flex gap-3 leading-relaxed text-sm">
+                <MapPin className="w-5 h-5 text-accent shrink-0 mt-1" />
+                <div>
+                  <span className="text-foreground/50 text-[10px] uppercase font-bold block mb-1">Building No./Flat No.</span>
+                  KH.978/970 & 1053/980 (Old KH.No.)<br />
+                  <span className="text-foreground/50 text-[10px] uppercase font-bold block mt-2 mb-1">Road/Street</span>
+                  Village-Khatoli<br />
+                  <span className="text-foreground/50 text-[10px] uppercase font-bold block mt-2 mb-1">City/Town/Village</span>
+                  Kishangarh, Rajasthan - 305801
+                </div>
               </li>
-              <li><a href="mailto:Aaastonex07@gmail.com" className="hover:text-accent transition-colors">Aaastonex07@gmail.com</a></li>
+              <li className="flex items-center gap-3">
+                <Mail className="w-5 h-5 text-accent shrink-0" />
+                <a href="mailto:aaastonex07@gmail.com" className="hover:text-accent transition-colors">aaastonex07@gmail.com</a>
+              </li>
             </ul>
           </div>
         </div>

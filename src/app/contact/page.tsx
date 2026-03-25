@@ -8,7 +8,14 @@ const contactDetails = [
   {
     icon: MapPin,
     title: "Visit Our Showroom",
-    details: ["KH.978/970 & 1053/980", "Village-Khatoli, Kishangarh", "Rajasthan 305801, India"],
+    details: [
+      "Building No./Flat No.: KH.978/970 & 1053/980 (Old KH.No.)",
+      "Road/Street: Village-Khatoli",
+      "City/Town/Village: Kishangarh",
+      "District: Ajmer",
+      "State: Rajasthan",
+      "Pin Code: 305801"
+    ],
     link: "https://maps.app.goo.gl/J4koWVZ45JEixudEA?g_st=ac"
   },
   {
@@ -20,8 +27,8 @@ const contactDetails = [
   {
     icon: Mail,
     title: "Email Enquiries",
-    details: ["Aaastonex07@gmail.com"],
-    link: "mailto:Aaastonex07@gmail.com"
+    details: ["aaastonex07@gmail.com"],
+    link: "mailto:aaastonex07@gmail.com"
   },
   {
     icon: Clock,
@@ -35,9 +42,9 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen pt-32 pb-24 bg-background px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        
+
         {/* HERO SECTION */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -55,7 +62,7 @@ export default function ContactPage() {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          
+
           {/* LEFT: INFO CARDS */}
           <div className="lg:col-span-1 space-y-6">
             {contactDetails.map((item, i) => (
@@ -76,9 +83,9 @@ export default function ContactPage() {
                       <p key={idx} className="text-foreground/60 text-sm leading-relaxed">{line}</p>
                     ))}
                     {item.link && (
-                      <a 
-                        href={item.link} 
-                        target="_blank" 
+                      <a
+                        href={item.link}
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="inline-block mt-4 text-xs font-bold uppercase tracking-widest text-accent hover:text-accent/80 transition-colors"
                       >
@@ -104,25 +111,25 @@ export default function ContactPage() {
                 <form className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="space-y-2">
                     <label className="text-xs uppercase tracking-widest font-bold text-foreground/40 ml-1">Full Name</label>
-                    <input 
-                      type="text" 
-                      placeholder="John Doe" 
+                    <input
+                      type="text"
+                      placeholder="John Doe"
                       className="w-full bg-background border border-border rounded-xl px-4 py-4 text-sm focus:border-accent focus:outline-none transition-colors"
                     />
                   </div>
                   <div className="space-y-2">
                     <label className="text-xs uppercase tracking-widest font-bold text-foreground/40 ml-1">Email Address</label>
-                    <input 
-                      type="email" 
-                      placeholder="john@example.com" 
+                    <input
+                      type="email"
+                      placeholder="john@example.com"
                       className="w-full bg-background border border-border rounded-xl px-4 py-4 text-sm focus:border-accent focus:outline-none transition-colors"
                     />
                   </div>
                   <div className="space-y-2">
                     <label className="text-xs uppercase tracking-widest font-bold text-foreground/40 ml-1">Phone / WhatsApp</label>
-                    <input 
-                      type="tel" 
-                      placeholder="+91 00000 00000" 
+                    <input
+                      type="tel"
+                      placeholder="+91 00000 00000"
                       className="w-full bg-background border border-border rounded-xl px-4 py-4 text-sm focus:border-accent focus:outline-none transition-colors"
                     />
                   </div>
@@ -139,14 +146,14 @@ export default function ContactPage() {
                   </div>
                   <div className="md:col-span-2 space-y-2">
                     <label className="text-xs uppercase tracking-widest font-bold text-foreground/40 ml-1">Your Message</label>
-                    <textarea 
+                    <textarea
                       rows={5}
-                      placeholder="Tell us about your project requirements..." 
+                      placeholder="Tell us about your project requirements..."
                       className="w-full bg-background border border-border rounded-xl px-4 py-4 text-sm focus:border-accent focus:outline-none transition-colors resize-none"
                     />
                   </div>
                   <div className="md:col-span-2">
-                    <button 
+                    <button
                       type="submit"
                       className="w-full py-5 bg-foreground text-background font-bold uppercase tracking-widest rounded-xl hover:bg-accent hover:text-white transition-all duration-300 flex items-center justify-center gap-3 group"
                     >
@@ -176,13 +183,13 @@ export default function ContactPage() {
           transition={{ duration: 1 }}
           className="mt-20 h-[500px] rounded-3xl overflow-hidden grayscale brightness-90 contrast-125 border border-border relative group"
         >
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3565.354422967156!2d74.853443!3d26.669145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjbCsDQwJzA4LjkiTiA3NMKwNTEnMTIuNCJF!5e0!3m2!1sen!2sin!4v1774422227883!5m2!1sen!2sin" 
-            width="100%" 
-            height="100%" 
-            style={{ border: 0 }} 
-            allowFullScreen={true} 
-            loading="lazy" 
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3565.354422967156!2d74.853443!3d26.669145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjbCsDQwJzA4LjkiTiA3NMKwNTEnMTIuNCJF!5e0!3m2!1sen!2sin!4v1774422227883!5m2!1sen!2sin"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen={true}
+            loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             className="group-hover:grayscale-0 transition-all duration-700"
           ></iframe>
